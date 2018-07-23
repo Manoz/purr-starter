@@ -1,0 +1,28 @@
+{
+  "env": {
+    "development": {
+      "presets": ["env"]
+    },
+    "production": {
+      "presets": [
+        [
+          "env",
+          {
+            "es2015": {
+              "modules": false
+            },
+            "targets": {
+              "ie": 9,
+              "uglify": true
+            }
+          }
+        ]
+      ]
+    },
+    "test": {
+      "presets": [
+        "env"
+      ]
+    }
+  }
+}

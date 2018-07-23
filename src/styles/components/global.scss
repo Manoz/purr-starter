@@ -1,0 +1,83 @@
+// scss-lint:disable universal-selector
+// Default Global Styles
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  quotes: "\201C" "\201D";
+  -webkit-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+:lang(fr) {
+  quotes: "\AB\A0" "\A0\BB"
+}
+
+::selection {
+  color: white;
+  background-color: $secondary-color;
+}
+
+body {
+  color: $primary-color;
+  letter-spacing: -.021em;
+  font-family: $font-stack;
+  @include fontsize(17);
+  line-height: 1.52947;
+  font-weight: 400;
+  font-style: normal;
+  background-color: white;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-synthesis: none;
+  -moz-font-feature-settings: "kern";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: ltr;
+  text-align: left;
+ }
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+// classic clearfix
+.clearfix {
+  @include clearfix();
+}
+
+.hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px,1px,1px,1px);
+  clip-path: inset(0 0 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 576px) { max-width: 540px; }
+  @media (min-width: 768px) { max-width: 720px; }
+  @media (min-width: 992px) { max-width: 960px; }
+  @media (min-width: 1200px) { max-width: 1140px; }
+}

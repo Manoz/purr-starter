@@ -1,0 +1,19 @@
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+// Generate both REM and PX values for fonts
+// Usage: @include fontsize(x);
+// x = font-size
+@mixin font-size($sizeValue: 12 ) {
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.0625 * $sizeValue) + rem;
+}
+
+@mixin fontsize($sizeValue: 12) {
+  @include font-size($sizeValue);
+}
