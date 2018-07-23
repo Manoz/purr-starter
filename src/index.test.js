@@ -33,10 +33,6 @@ function checkString(file, string, done) {
 
 function runTests() {
   describe('Test if the files from the "/dist" directory have the expected content', () => {
-    /**
-     * We're looking for the '<link href="styles/' string inside the index.html file
-     * because in anycase
-     */
     it('"index.html" should contain the main css file', (done) => {
       const string = '<link href="styles/';
       checkString(path.resolve('./dist', 'index.html'), string, done);
