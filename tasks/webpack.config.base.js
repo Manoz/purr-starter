@@ -33,14 +33,21 @@ module.exports = options => ({
   },
 
   plugins: options.plugins.concat([
+    new webpack.ProvidePlugin({
+      // make fetch available
+      fetch: 'exports-loader?self.fetch!whatwg-fetch',
+    }),
+
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
+      // hashToto: JSON.stringify(__webpack_hash__), // eslint-disable-line
     }),
 
     new MiniCssExtractPlugin({
-      filename: isDev ? 'styles/[name].css' : 'styles/[name].min.css',
+      filename: isDev ? 'styles/[name].css' : 'styles/[name].[hash].min.css',
+      chunkFilename: isDev ? 'styles/[id].css' : 'styles/[id].[hash].css',
     }),
   ]),
 
@@ -58,7 +65,7 @@ module.exports = options => ({
         test: /\.(sa|sc|c)ss$/,
         use: [
           // fallback to style-loader in dev env
-          process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+          isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {

@@ -32,8 +32,9 @@ module.exports = require('./webpack.config.base')({
     new webpack.HotModuleReplacementPlugin(),
 
     new HtmlWebpackPlugin({
-      inject: true,
       template: 'src/index.html',
+      favicon: 'src/assets/images/favicon/favicon.ico',
+      inject: true,
     }),
 
     new CircularDependencyPlugin({
