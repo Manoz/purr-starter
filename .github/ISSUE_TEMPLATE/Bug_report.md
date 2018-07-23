@@ -20,10 +20,11 @@ A description of what is expected
 **Screenshots**
 Add screenshots if possible
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS, windows, linux]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+**Versions**
+- purr-starter (see `package.json`):
+- Node/NPM: [e.g. Node v10.4.0, Npm v6.1.0]
+- Browser: [e.g. chrome v22, safari]
+- Operating system: [e.g. iOS, windows 10, linux Ubuntu]
 
 **Additional**
 Add anything about the issue here
