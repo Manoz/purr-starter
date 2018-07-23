@@ -4,7 +4,12 @@
 
 ---
 
-🚧 WIP 🚧 : purr starter is a modern Webpack starter kit fueled with a lot of cool stuff.
+[![Build Status](https://travis-ci.com/Manoz/purr-starter.svg?token=fV1pgutnXPjejYrLnsBw&branch=master)](https://travis-ci.com/Manoz/purr-starter)
+[![Dependency Status](https://david-dm.org/manoz/purr-starter.svg?style=flat-square)](https://david-dm.org/manoz/purr-starter)
+
+<span style="color: #cf4647;">purr</span> starter is a modern Webpack starter kit fueled with a lot of cool stuff.
+
+🚧 WIP 🚧 : It's a beta, it works fine but I need to improve a lot of things. Use it, test it, play with it, share it, do what you want.
 
 **Current version:** `0.1.0`
 
