@@ -1,0 +1,36 @@
+environment:
+  matrix:
+  - nodejs_version: "8"
+  - nodejs_version: "7"
+  - nodejs_version: "6"
+
+install:
+  # Get the latest stable version of Node.js or io.js
+  - ps: Install-Product node $env:nodejs_version x64
+
+  # install modules
+  - yarn
+
+cache:
+  - "%LOCALAPPDATA%\\Yarn"
+
+# Post-install test scripts.
+test_script:
+  # Output useful info for debugging.
+  - node --version
+  - npm --version
+  # run tests
+  - npm run test:CI
+
+# Build the app
+build: on
+
+notifications:
+- provider: Email
+  to:
+  - legrd.kevin@gmail.com
+  subject: 'Build failed: purr-starter'
+  message: The continuous integration build failed. See https://ci.appveyor.com/project/Manoz/purr-starter/ for details.
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: false

@@ -1,12 +1,11 @@
 language: node_js
 
 node_js:
-  - 9
   - 8
 
 script:
   - npm run build
-  - npm run test
+  - npm run test:CI
 
 notifications:
   email:
@@ -16,3 +15,6 @@ cache:
   yarn: true
   directories:
     - node_modules
+
+after_success:
+  - npm run test:cover:CI
