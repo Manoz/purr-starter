@@ -12,8 +12,6 @@ notifications:
   email:
     on_failure: change
 
-after_success: 'npm run test:coveralls'
-
 cache:
   yarn: true
   directories:
