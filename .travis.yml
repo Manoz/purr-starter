@@ -1,6 +1,9 @@
+if: branch = master
+
 language: node_js
 
 node_js:
+  - 9
   - 8
 
 script:
@@ -11,10 +14,10 @@ notifications:
   email:
     on_failure: change
 
+after_success:
+  - npm run test:cover:CI
+
 cache:
   yarn: true
   directories:
     - node_modules
-
-after_success:
-  - npm run test:cover:CI
