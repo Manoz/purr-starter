@@ -42,8 +42,8 @@
     "build": "cross-env NODE_ENV=production node tools/build.js",
     "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
-    "test": "mocha-webpack --webpack-config tasks/webpack.config.test.js \"src/**/*.test.js\"",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
+    "test": "nyc --reporter=html --reporter=text mocha-webpack --webpack-config tasks/webpack.config.test.js \"src/**/*.test.js\"",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "jquery": "^3.3.1",
@@ -80,6 +80,7 @@
     "mocha-webpack": "2.0.0-beta.0",
     "node-sass": "^4.9.2",
     "null-loader": "^0.1.1",
+    "nyc": "^12.0.2",
     "optimize-css-assets-webpack-plugin": "^5.0.0",
     "postcss-loader": "^2.1.6",
     "rimraf": "^2.6.2",

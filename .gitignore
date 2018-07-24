@@ -6,23 +6,16 @@ yarn-debug.log*
 yarn-error.log*
 
 # Project related stuff
-dist/
+dist
+coverage
+.nyc_output
 
 # Dependency dir
 node_modules
 
-# Runtime data
-pids
-*.pid
-*.seed
-
 # Editor stuff
 .idea
 .vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
 
 # OS files
 .DS_Store
