@@ -2,6 +2,8 @@ const assert = require('assert');
 const fs = require('fs');
 const path = require('path');
 
+const sum = require('../src/scripts/sum');
+
 function checkString(file, string, done) {
   let character = '';
   let matchFound = false;
@@ -41,6 +43,12 @@ function runTests() {
     it('"index.html" should contain the main javascript file', (done) => {
       const string = 'src="scripts/runtime~';
       checkString(path.resolve('./dist', 'index.html'), string, done);
+    });
+  });
+
+  describe('Test sum', () => {
+    it('adds 1 + 2 to equal 3', () => {
+      expect(sum(1, 2)).toBe(3);
     });
   });
 }
