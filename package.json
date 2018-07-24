@@ -42,7 +42,7 @@
     "build": "cross-env NODE_ENV=production node tools/build.js",
     "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
-    "test": "nyc --reporter=html --reporter=text mocha-webpack --webpack-config tasks/webpack.config.test.js \"src/**/*.test.js\"",
+    "test": "nyc mocha-webpack --webpack-config tasks/webpack.config.test.js \"src/**/*.test.js\"",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
