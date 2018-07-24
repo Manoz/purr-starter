@@ -13,6 +13,7 @@
 <div align="center">
 
 [![Build Status](https://travis-ci.com/Manoz/purr-starter.svg?token=fV1pgutnXPjejYrLnsBw&branch=master)](https://travis-ci.com/Manoz/purr-starter)
+[![Build status](https://ci.appveyor.com/api/projects/status/ddqbl7ts07ly5go0?svg=true)](https://ci.appveyor.com/project/Manoz/purr-starter)
 [![dependencies Status](https://david-dm.org/manoz/purr-starter/status.svg)](https://david-dm.org/manoz/purr-starter)
 [![devDependencies Status](https://david-dm.org/manoz/purr-starter/dev-status.svg)](https://david-dm.org/manoz/purr-starter?type=dev)
 
