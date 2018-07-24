@@ -4,6 +4,11 @@ version: "{build}"
 # Do not build on gh tags
 skip_tags: true
 
+# Build the branch Master only
+branches:
+  only:
+    - master
+
 # Test against these versions of Node.js
 environment:
 
