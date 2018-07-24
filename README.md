@@ -16,6 +16,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/ddqbl7ts07ly5go0?svg=true)](https://ci.appveyor.com/project/Manoz/purr-starter)
 [![dependencies Status](https://david-dm.org/manoz/purr-starter/status.svg)](https://david-dm.org/manoz/purr-starter)
 [![devDependencies Status](https://david-dm.org/manoz/purr-starter/dev-status.svg)](https://david-dm.org/manoz/purr-starter?type=dev)
+[![Coverage Status](https://coveralls.io/repos/github/Manoz/purr-starter/badge.svg?branch=master)](https://coveralls.io/github/Manoz/purr-starter?branch=master)
 
 **Current version:** `0.1.0`
 </div>
@@ -66,9 +67,9 @@ This app uses some good technologies:
 ## TODO
 
   * [ ] Maybe add some kind of watcher when adding images in the `./src/assets/images` folder.
-  * [ ] Add Jest or Mocha tests
+  * [x] Add Jest or Mocha tests
   * [ ] More webpack (or maybe Gulp) tasks to handle fonts or iconfonts
-  * [ ] Add CI
+  * [x] Add CI
   * [ ] Better documentation
 
 # License
