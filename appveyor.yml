@@ -13,6 +13,7 @@ install:
 
 cache:
   - "%LOCALAPPDATA%\\Yarn"
+  - node_modules
 
 # Post-install test scripts.
 test_script:
@@ -22,8 +23,11 @@ test_script:
   # run tests
   - npm run test:CI
 
-# Build the app
-build: on
+before_test:
+  - npm run build
+
+# Don't build the app
+build: off
 
 notifications:
 - provider: Email
