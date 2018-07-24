@@ -53,6 +53,12 @@ Here is some commands you can also use instead:
 
 * `yarn clean-dist`: clean the './dist' folder
 
+## 📖 Documentation
+
+The documentation for this project is not perfect for now but I'll add more content in the future and maybe a Wiki.
+
+You can learn more about purr-starter [here](./docs/README.md).
+
 ## 🚎 Technos
 
 This app uses some good technologies:
