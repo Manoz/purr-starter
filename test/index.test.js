@@ -10,7 +10,7 @@ function checkString(file, string, done) {
 
   readStream.on('close', done);
   readStream.on('error', done);
-  readStream.on('readable', function () { // eslint-disable-line func-names
+  readStream.on('readable', function () { // eslint-disable-line
     // Read file until the string is found
     // or the whole file has been read
     // eslint-disable-next-line

@@ -41,8 +41,10 @@
     "prebuild": "npm run clean-dist",
     "build": "cross-env NODE_ENV=production node tools/build.js",
     "pretest": "npm run test:clean && npm run lint",
-    "test:clean": "rimraf ./coverage",
-    "test": "nyc mocha-webpack --webpack-config tasks/webpack.config.test.js \"src/**/*.test.js\"",
+    "test:clean": "rimraf ./coverage && rimraf ./.nyc_output",
+    "test": "mocha",
+    "test:coveralls": "npm run coverage && npm run coveralls",
+    "coverage": "cross-env NODE_ENV=test nyc --reporter=text --cache mocha",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
@@ -55,6 +57,7 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.6",
     "babel-loader": "^7.1.5",
+    "babel-plugin-istanbul": "^4.1.6",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.5",
     "chalk": "^2.4.1",
