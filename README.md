@@ -68,9 +68,10 @@ This app uses some good technologies:
 
   * [ ] Maybe add some kind of watcher when adding images in the `./src/assets/images` folder.
   * [x] Add Jest or Mocha tests
-  * [ ] More webpack (or maybe Gulp) tasks to handle fonts or iconfonts
+  * [x] More webpack (or maybe Gulp) tasks to handle fonts or iconfonts (cancelled)
   * [x] Add CI
-  * [ ] Better documentation
+  * [ ] Handle iconfont svg
+  * [ ] Better readme and documentation
 
 # License
 Released under the [MIT](./LICENSE) license.

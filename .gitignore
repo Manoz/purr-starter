@@ -16,6 +16,7 @@ node_modules
 # Editor stuff
 .idea
 .vscode
+TODO
 
 # OS files
 .DS_Store
