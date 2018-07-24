@@ -1,17 +1,30 @@
+# Set build version format here instead of in the admin panel
+version: "{build}"
+
+# Do not build on gh tags
+skip_tags: true
+
+# Test against these versions of Node.js
 environment:
+
   matrix:
-  - nodejs_version: "8"
+  - nodejs_version: 9
+  - nodejs_version: 8
+
+# Fix line endings in Windows. (runs before repo cloning)
+init:
+  - git config --global core.autocrlf input
 
 install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version x64
-
-  # install modules
+  - set PATH=%APPDATA%\yarn;%PATH%
   - yarn
 
+# Cache node_modules for faster builds
 cache:
   - "%LOCALAPPDATA%\\Yarn"
-  - node_modules
+  - node_modules -> package.json
 
 # Post-install test scripts.
 test_script:
