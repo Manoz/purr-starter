@@ -2,7 +2,10 @@ const assert = require('assert');
 const fs = require('fs');
 const path = require('path');
 
+const pkg = require('../package.json');
 const sum = require('../src/scripts/sum');
+
+const appVersion = pkg.version;
 
 function checkString(file, string, done) {
   let character = '';
@@ -42,6 +45,11 @@ function runTests() {
 
     it('"index.html" should contain the main javascript file', (done) => {
       const string = 'src="scripts/runtime~';
+      checkString(path.resolve('./dist', 'index.html'), string, done);
+    });
+
+    it('"index.html" should contain the correct app version depending on the package.json file', (done) => {
+      const string = `App version: ${appVersion}`;
       checkString(path.resolve('./dist', 'index.html'), string, done);
     });
   });

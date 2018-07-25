@@ -6,8 +6,10 @@
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const pkg = require('../package.json');
 
 const isDev = process.env.NODE_ENV !== 'production';
+const appVersion = pkg.version;
 
 module.exports = options => ({
   mode: options.mode,
@@ -42,7 +44,7 @@ module.exports = options => ({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
-      // hashToto: JSON.stringify(__webpack_hash__), // eslint-disable-line
+      APP_VERSION: JSON.stringify(appVersion),
     }),
 
     new MiniCssExtractPlugin({
@@ -64,22 +66,26 @@ module.exports = options => ({
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
+          // creates style nodes from JS strings
           // fallback to style-loader in dev env
           isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
+            // translates CSS into CommonJS
             loader: 'css-loader',
             options: {
               sourceMap: false,
             },
           }, {
+            // translates CSS with JavaScript
             loader: 'postcss-loader',
             options: {
               plugins: () => [
-                require('autoprefixer'), // eslint-disable-line global-require
+                require('autoprefixer'),
               ],
               sourceMap: false,
             },
           }, {
+            // compiles Sass to CSS
             loader: 'sass-loader',
             options: {
               includePaths: [path.resolve(__dirname, 'src', 'scss')],
@@ -106,6 +112,7 @@ module.exports = options => ({
         test: /\.svg$/,
         use: [
           {
+            // Load all SVGs as base64 encoding if they are smaller than 10 kb
             loader: 'svg-url-loader',
             options: {
               // Inline files smaller than 10 kB
@@ -119,13 +126,16 @@ module.exports = options => ({
         test: /\.(jpg|png|gif)$/,
         use: [
           {
+            // Load all images as base64 encoding if they are smaller than 10 kb
             loader: 'url-loader',
             options: {
               // Inline files smaller than 10 kB
               limit: 10 * 1024,
+              name: 'images/[name].[hash].[ext]',
             },
           },
           {
+            // Optimize all images
             loader: 'image-webpack-loader',
             options: {
               mozjpeg: {
@@ -144,10 +154,6 @@ module.exports = options => ({
             },
           },
         ],
-      },
-      {
-        test: /\.html$/,
-        use: 'html-loader',
       },
     ],
   },

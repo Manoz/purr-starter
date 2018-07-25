@@ -1,4 +1,3 @@
-// scss-lint:disable universal-selector
 // Default Global Styles
 *,
 *::before,
@@ -16,7 +15,7 @@ html {
 }
 
 ::selection {
-  color: $white;
+  color: color('shades', 'white');
   background-color: $secondary-color;
 }
 
@@ -75,4 +74,10 @@ img {
   @media (min-width: 768px) { max-width: 720px; }
   @media (min-width: 992px) { max-width: 960px; }
   @media (min-width: 1200px) { max-width: 1140px; }
+}
+
+.icon {
+  display: inline-block;
+  width: 22px;
+  vertical-align: middle;
 }

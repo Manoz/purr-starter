@@ -32,7 +32,8 @@ module.exports = require('./webpack.config.base')({
     new webpack.HotModuleReplacementPlugin(),
 
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: 'src/index.ejs',
+      title: 'My Awesome Purr App',
       favicon: 'src/assets/images/favicon/favicon.ico',
       inject: true,
     }),
