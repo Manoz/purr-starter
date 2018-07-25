@@ -1,4 +1,3 @@
-// scss-lint:disable universal-selector
 // Default Global Styles
 *,
 *::before,
@@ -16,7 +15,7 @@ html {
 }
 
 ::selection {
-  color: $white;
+  color: color('shades', 'white');
   background-color: $secondary-color;
 }
 

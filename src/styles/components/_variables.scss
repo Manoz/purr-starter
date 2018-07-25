@@ -58,9 +58,6 @@ $shades: (
   'transparent':  transparent
 );
 
-$black: color('shades', 'black');
-$white: color('shades', 'white');
-
 $colors: (
   'red': $red,
   'pink': $pink,
@@ -79,6 +76,9 @@ $colors: (
   }
   @return null;
 }
+
+$black: color('shades', 'black');
+$white: color('shades', 'white');
 
 // Typography
 // ==========================================================================

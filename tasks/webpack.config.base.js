@@ -6,6 +6,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const IconfontWebpackPlugin = require('iconfont-webpack-plugin');
 
 const isDev = process.env.NODE_ENV !== 'production';
 
@@ -74,8 +75,12 @@ module.exports = options => ({
           }, {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [
+              plugins: loader => [
                 require('autoprefixer'), // eslint-disable-line global-require
+                new IconfontWebpackPlugin({
+                  resolve: loader.resolve,
+                  fontNamePrefix: 'purr-',
+                }),
               ],
               sourceMap: false,
             },
