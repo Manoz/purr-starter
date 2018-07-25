@@ -1,18 +1,20 @@
 .wiggle {
-  animation-name: wiggle;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  animation-name: wiggle;
   animation-timing-function: ease-in-out;
 }
 
 @keyframes wiggle {
   from {
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
   }
+
   65% {
-    transform: translate(-50%,8px);
+    transform: translate(-50%, 8px);
   }
+
   to {
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
   }
 }

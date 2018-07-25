@@ -4,8 +4,84 @@
 $primary-color: #111 !default;
 $secondary-color: #cf4647 !default;
 
+$red: (
+  'base':       #cf4647,
+  'custom':     #8d3838,
+  'lighten-5':  #ffebee,
+  'lighten-4':  #ffcdd2,
+  'lighten-3':  #ef9a9a,
+  'lighten-2':  #e57373,
+  'lighten-1':  #ef5350,
+  'darken-1':   #e53935,
+  'darken-2':   #d32f2f,
+  'darken-3':   #c62828,
+  'darken-4':   #b71c1c,
+  'accent-1':   #ff8a80,
+  'accent-2':   #ff5252,
+  'accent-3':   #ff1744,
+  'accent-4':   #d50000
+);
+
+$pink: (
+  'base':       #e91e63,
+  'lighten-5':  #fce4ec,
+  'lighten-4':  #f8bbd0,
+  'lighten-3':  #f48fb1,
+  'lighten-2':  #f06292,
+  'lighten-1':  #ec407a,
+  'darken-1':   #d81b60,
+  'darken-2':   #c2185b,
+  'darken-3':   #ad1457,
+  'darken-4':   #880e4f,
+  'accent-1':    #ff80ab,
+  'accent-2':    #ff4081,
+  'accent-3':    #f50057,
+  'accent-4':    #c51162
+);
+
+$grey: (
+  'base':       #9e9e9e,
+  'lighten-5':  #fafafa,
+  'lighten-4':  #f5f5f5,
+  'lighten-3':  #eee,
+  'lighten-2':  #e0e0e0,
+  'lighten-1':  #bdbdbd,
+  'darken-1':   #757575,
+  'darken-2':   #616161,
+  'darken-3':   #424242,
+  'darken-4':   #212121
+);
+
+$shades: (
+  'black':        #000,
+  'white':        #fff,
+  'transparent':  transparent
+);
+
+$black: color('shades', 'black');
+$white: color('shades', 'white');
+
+$colors: (
+  'red': $red,
+  'pink': $pink,
+  'grey': $grey,
+  'shades': $shades
+) !default;
+
+// usage: color('name_of_color', 'type_of_color')
+// to avoid to repeating map-get($colors, ...)
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $currcolor: map-get($colors, $color);
+    @if map-has-key($currcolor, $type) {
+      @return map-get($currcolor, $type);
+    }
+  }
+  @return null;
+}
+
 // Typography
 // ==========================================================================
 
-$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-stack: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;

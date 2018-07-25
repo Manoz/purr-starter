@@ -13,7 +13,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 if (isProd) {
   browserSync({
-    logPrefix: 'gulp-purr',
+    logPrefix: 'PURR',
     port: 4000,
     ui: {
       port: 4001,
@@ -31,7 +31,7 @@ if (isProd) {
 } else {
   const bundler = webpack(webpackConfigDev);
   browserSync({
-    logPrefix: 'gulp-purr',
+    logPrefix: 'PURR',
     port: 3000,
     ui: {
       port: 3001,

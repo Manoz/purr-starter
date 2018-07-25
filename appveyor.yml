@@ -1,0 +1,56 @@
+# Set build version format here instead of in the admin panel
+version: "{build}"
+
+# Do not build on gh tags
+skip_tags: true
+
+# Build the branch Master only
+branches:
+  only:
+    - master
+
+# Test against these versions of Node.js
+environment:
+
+  matrix:
+  - nodejs_version: 9
+  - nodejs_version: 8
+
+# Fix line endings in Windows. (runs before repo cloning)
+init:
+  - git config --global core.autocrlf input
+
+install:
+  # Get the latest stable version of Node.js or io.js
+  - ps: Install-Product node $env:nodejs_version x64
+  - set PATH=%APPDATA%\yarn;%PATH%
+  - yarn
+
+# Cache node_modules for faster builds
+cache:
+  - "%LOCALAPPDATA%\\Yarn"
+  - node_modules -> package.json
+
+# Post-install test scripts.
+test_script:
+  # Output useful info for debugging.
+  - node --version
+  - npm --version
+  # run tests
+  - npm run test:CI
+
+before_test:
+  - npm run build
+
+# Don't build the app
+build: off
+
+notifications:
+- provider: Email
+  to:
+  - legrd.kevin@gmail.com
+  subject: 'Build failed: purr-starter'
+  message: The continuous integration build failed. See https://ci.appveyor.com/project/Manoz/purr-starter/ for details.
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: false

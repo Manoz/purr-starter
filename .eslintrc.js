@@ -3,8 +3,6 @@ module.exports = {
   parser: 'babel-eslint',
   extends: [
     'airbnb-base',
-    'plugin:import/errors',
-    'plugin:import/warnings',
   ],
   env: {
     node: true,
@@ -15,10 +13,6 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',
-    ecmaFeatures: {
-      modules: true,
-      experimentalObjectRestSpread: true
-    },
   },
   'rules': {
     'arrow-body-style': [2, 'as-needed'],
