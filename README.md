@@ -18,7 +18,7 @@
 [![devDependencies Status](https://david-dm.org/manoz/purr-starter/dev-status.svg)](https://david-dm.org/manoz/purr-starter?type=dev)
 [![Coverage Status](https://coveralls.io/repos/github/Manoz/purr-starter/badge.svg?branch=master)](https://coveralls.io/github/Manoz/purr-starter?branch=master)
 
-**Current version:** `0.1.0`
+**Current version:** `0.1.1`
 </div>
 
 ## ☕️ Quick start
@@ -72,10 +72,10 @@ This app uses some good technologies:
 
 ## TODO
 
-  * [ ] Maybe add some kind of watcher when adding images in the `./src/assets/images` folder.
-  * [x] Add Jest or Mocha tests
-  * [x] More webpack (or maybe Gulp) tasks to handle fonts or iconfonts (cancelled)
-  * [x] Add CI
+  * [x] <span style="color: #f92672;">Maybe add some kind of watcher when adding images in the `./src/assets/images` folder.</span>
+  * [x] <span style="color: #9cce3b;">Add Jest or Mocha tests</span>
+  * [x] <span style="color: #9cce3b;">More webpack (or maybe Gulp) tasks to handle fonts or iconfonts (cancelled)</span>
+  * [x] <span style="color: #9cce3b;">Add CI</span>
   * [ ] Handle iconfont svg
   * [ ] Better readme and documentation
 
