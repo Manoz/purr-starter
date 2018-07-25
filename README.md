@@ -5,7 +5,7 @@
 <br />
 
 <div align="center">
-  <strong><span style="color: #cf4647;">purr</span> starter is a modern Webpack starter kit fueled with a lot of cool stuff.</strong>
+  <strong>purr starter is a modern Webpack starter kit fueled with a lot of cool stuff.</strong>
 
   <p>🚧 WIP 🚧 : It's a beta, it works fine but I need to improve a lot of things. Use it, test it, play with it, share it, do what you want ❤️</p>
 </div>
@@ -72,10 +72,10 @@ This app uses some good technologies:
 
 ## TODO
 
-  * [x] <span style="color: #f92672;">Maybe add some kind of watcher when adding images in the `./src/assets/images` folder.</span>
-  * [x] <span style="color: #9cce3b;">Add Jest or Mocha tests</span>
-  * [x] <span style="color: #9cce3b;">More webpack (or maybe Gulp) tasks to handle fonts or iconfonts (cancelled)</span>
-  * [x] <span style="color: #9cce3b;">Add CI</span>
+  * [x] Maybe add some kind of watcher when adding images in the `./src/assets/images` folder.
+  * [x] Add Jest or Mocha tests
+  * [x] More webpack (or maybe Gulp) tasks to handle fonts or iconfonts (cancelled)
+  * [x] Add CI
   * [ ] Handle iconfont svg
   * [ ] Better readme and documentation
 
