@@ -58,7 +58,7 @@ module.exports = require('./webpack.config.base')({
     new webpack.ExtendedAPIPlugin(),
 
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: 'src/index.ejs',
       favicon: 'src/assets/images/favicon/favicon.ico',
       inject: true,
     }),
