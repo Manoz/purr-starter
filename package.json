@@ -1,7 +1,7 @@
 {
   "name": "purr-starter",
   "displayName": "Purr Starter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A modern Webpack starter kit fueled with a lot of cool stuff",
   "author": {
     "name": "Kevin Legrand",
@@ -38,6 +38,7 @@
     "lint:eslint": "eslint --ignore-path .eslintignore --ignore-pattern tools",
     "lint:eslint:fix": "eslint --ignore-path .eslintignore --ignore-pattern tools --fix",
     "lint:js": "npm run lint:eslint -- . ",
+    "remove-demo": "npm run clean-dist && npm run test:clean && shjs ./tools/cleanDemo.js",
     "clean-dist": "rimraf ./dist",
     "prebuild": "npm run clean-dist",
     "build": "cross-env NODE_ENV=production node tools/build.js",
@@ -102,6 +103,7 @@
     "rimraf": "^2.6.2",
     "sass-lint": "^1.12.1",
     "sass-loader": "^7.0.3",
+    "shelljs": "^0.8.2",
     "style-loader": "^0.21.0",
     "svg-url-loader": "^2.3.2",
     "uglifyjs-webpack-plugin": "^1.2.7",

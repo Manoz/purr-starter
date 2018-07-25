@@ -81,6 +81,7 @@ Here's some information on what major script in `package.json` does.
 | lint              | Lint CSS and JS for the production build.                                                                            |
 | lint:eslint:fix   | Utility command to automatically fix (if possible) the Eslint issues                                                 |
 | clean-dist        | Removes the `./dist` folder                                                                                          |
+| remove-demo       | Removes the demo app                                                                                                 |
 | prebuild          | Runs automatically before the build script. Simply remove the ./dist folder for now                                  |
 | build             | Bundles everything using webpack and writes it to `./dist`.                                                          |
 | pretest           | Runs automatically before the test script. Remove the `./coverage` folder and lint the code                          |
@@ -92,27 +93,7 @@ Unfortunately, I can't comment scripts in package.json so feel free to read the 
 
 ## How to clean the starter kit?
 
-Purr Starter includes an example app. For now there's no npm script to remove it but I'll add it in the future.
-If you want to remove the demo app, you will have to manually clean the files inside the `./src` folder.
-
-```bash
-├── src
-│   ├── assets
-│   │   ├── images
-│   │   │   ├── favicon    # Replace the content with your favicon files (keep the same name if possible)
-│   │   │   └── ...        # You can delete everything else
-│   ├── scripts
-│   │   ├── main.js        # You can modify it. Just keep the styles import.
-│   │   └── sum.js         # Can be deleted
-│   ├── styles
-│   │   ├── ...            # Modify files as you want
-│   │   └── style.scss     # Modify your imports but keep this file
-│   ├── .htaccess          # Can be deleted but don't forget to delete the import inside main.js
-│   └── index.html         # Modify your app <title> and content as you want. Scripts and styles are added by Webpack
-
-```
-
-This is not the best for a starter kit for now but I'll try to add the `remove-demo` node script as soon as possible :)
+Simply use `npm run remove-demo` or `yarn remove-demo`. The script will remove all the demo content and replace everything with default empty content.
 
 ## What other project inspired me
 
