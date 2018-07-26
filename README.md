@@ -16,22 +16,24 @@
 [![devDependencies Status](https://david-dm.org/manoz/purr-starter/dev-status.svg)](https://david-dm.org/manoz/purr-starter?type=dev)
 [![Coverage Status](https://coveralls.io/repos/github/Manoz/purr-starter/badge.svg?branch=master)](https://coveralls.io/github/Manoz/purr-starter?branch=master)
 
-**Current version:** `0.1.2`
+**Current version:** `0.1.3`
 </div>
 
 ## ☕️ Quick start
 
 1. Clone this repo using `git clone https://github.com/Manoz/purr-starter.git` and move to the directory: `cd purr-starter`
-2. Run `yarn install` or `npm install` to install dependencies
+2. Run `yarn setup` or `npm run setup` to start the setup process and install dependencies
 3. Run `yarn start` or `npm run start` to see the demo app at *`http://localhost:3000`*
 4. Run `yarn remove-demo` or `npm run remove-demo` to delete the demo app
+
+If you don't want to use the setup script you can run `yarn install` or `npm install` after cloning the repo and keep everything in place.
 
 Here is some additional commands you can also use:
 
 * `yarn build` or `npm run build`: to build the production app inside the `*./dist*` folder.
 * `yarn test` or `npm run test` to test the built app
 
-More information about the npm scripts can be found [here](https://github.com/Manoz/purr-starter/tree/master/docs#npm-scripts)
+More information about the npm scripts can be found [here](https://github.com/Manoz/purr-starter/tree/master/docs#npm-scripts).
 
 ## 📖 Documentation
 

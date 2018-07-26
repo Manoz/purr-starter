@@ -5,6 +5,7 @@
 - About this project
   - [Why I've created it](#why-ive-created-it)
   - [Folder structure](#folder-structure)
+  - [About the setup script](#about-the-setup-script)
   - [How to clean the starter kit?](#how-to-clean-the-starter-kit)
   - [What other project inspired me](#what-other-project-inspired-me)
 - Technologies
@@ -78,6 +79,7 @@ Here's some information on what major script in `package.json` does.
 | preinstall        | Runs automatically before `yarn install` to check your node version                                                  |
 | prestart          | Runs automatically before start to display a message.                                                                |
 | start             | Starts the dev webserver and opens the app in your default browser.                                                  |
+| setup             | Install dependencies and start the setup script                                                                      |
 | open:src          | Opens the app in your browser with the dev environment                                                               |
 | open:dist         | Opens the app in your browser with the production build.                                                             |
 | lint              | Lint CSS and JS for the production build.                                                                            |
@@ -92,6 +94,15 @@ Here's some information on what major script in `package.json` does.
 | test:cover:CI     | This should only be used from the travis build. Runs coverage and sends machine readable lcov data to Coveralls.     |
 
 Unfortunately, I can't comment scripts in package.json so feel free to read the scripts and ask if there's something you don't understand or something I could improve.
+
+## About the setup script
+
+The setup script is used to make it easier for you to own the starter-kit.
+It removes the original Git Repository, the npm setup script in your `package.json` and the JS script in the `./tools` folder.
+
+It's perfect if you want to run your app as fast as possible.
+
+If you don't want to use the setup script you can run `yarn install` or `npm install` after cloning the repo and keep everything in place.
 
 ## How to clean the starter kit?
 
