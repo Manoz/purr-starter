@@ -64,7 +64,7 @@ if (isProd) {
     },
 
     files: [
-      'src/*.html',
+      'public/*.html',
     ],
   });
 }

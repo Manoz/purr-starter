@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = require('./webpack.config.base')({
   mode: 'development',
@@ -19,6 +21,11 @@ module.exports = require('./webpack.config.base')({
 
   optimization: {
     minimize: false,
+    splitChunks: {
+      chunks: 'all',
+      name: 'vendors',
+    },
+    runtimeChunk: true,
   },
 
   devtool: 'eval-source-map',
@@ -30,9 +37,16 @@ module.exports = require('./webpack.config.base')({
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
 
+    new HtmlWebpackPlugin({
+      template: 'public/index.html',
+      inject: true,
+    }),
+
     new CircularDependencyPlugin({
       exclude: /a\.js|node_modules/,
       failOnError: false, // show a warning when there is a circular dependency
     }),
+
+    new FriendlyErrorsPlugin(),
   ],
 });

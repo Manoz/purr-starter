@@ -2,10 +2,10 @@
  * Main Webpack Configuration
  * This file is shared between our dev and prod envs
  */
-
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackBar = require('webpackbar');
+const AssetsPlugin = require('assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isDev = process.env.NODE_ENV !== 'production';
@@ -45,10 +45,11 @@ module.exports = options => ({
       },
     }),
 
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      favicon: 'src/assets/images/favicon/favicon.ico',
-      inject: true,
+    new WebpackBar(),
+
+    new AssetsPlugin({
+      path: path.resolve(process.cwd(), 'dist'),
+      filename: 'assets.json',
     }),
 
     new MiniCssExtractPlugin({
