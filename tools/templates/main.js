@@ -1,6 +1,6 @@
 // Load the favicon and the .htaccess file
-import '!file-loader?name=[name].[ext]!../assets/images/favicon/favicon.ico';
-import 'file-loader?name=[name].[ext]!../.htaccess';
+import '!file-loader?name=images/favicon/[name].[ext]!../../public/images/favicon/favicon.ico';
+import 'file-loader?name=.htaccess!../../public/.htaccess';
 
 import '../styles/style.scss';
 
