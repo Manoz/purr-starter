@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const config = require('../tasks/webpack.config.prod');
-const { chalkError, chalkSuccess, chalkWarning, chalkProcessing } = require('./chalkConfig');
+const { chalkError, chalkSuccess, chalkWarning, chalkProcessing } = require('./helpers/chalkConfig');
 
 console.log(chalkProcessing('Generating minified bundle. This will take a moment...'));
 

@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = require('./webpack.config.base')({
@@ -30,13 +29,6 @@ module.exports = require('./webpack.config.base')({
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-
-    new HtmlWebpackPlugin({
-      template: 'src/index.ejs',
-      title: 'My Awesome Purr App',
-      favicon: 'src/assets/images/favicon/favicon.ico',
-      inject: true,
-    }),
 
     new CircularDependencyPlugin({
       exclude: /a\.js|node_modules/,

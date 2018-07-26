@@ -1,6 +1,6 @@
 // This script cleans the demo app
 const shell = require('shelljs');
-const addCheckMark = require('./checkmark');
+const addCheckMark = require('./helpers/checkmark');
 
 process.stdin.setEncoding('utf8');
 
@@ -16,11 +16,11 @@ process.stdout.write('Demo app cleanup started...');
 shell.rm('-rf', 'src/assets/images');
 shell.rm('-rf', 'src/scripts/*');
 shell.rm('-rf', 'src/styles/*');
-shell.rm('-rf', 'src/index.ejs');
+shell.rm('-rf', 'src/index.html');
 shell.rm('-rf', 'test/index.test.js');
 
 // Replace the files in the root src/ folder
-shell.cp('tools/templates/index.ejs', 'src/index.ejs');
+shell.cp('tools/templates/index.html', 'src/index.html');
 shell.cp('tools/templates/index.test.js', 'test/index.test.js');
 shell.cp('tools/templates/main.js', 'src/scripts/main.js');
 shell.cp('tools/templates/style.scss', 'src/styles/style.scss');

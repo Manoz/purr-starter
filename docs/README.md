@@ -43,13 +43,15 @@ This project is also useful as inspiration for ideas you might want to integrate
 ├── tasks                          # Contains Webpack config for dev and prod env
 ├── test                           # Test files used by Jest to test your app
 ├── tools                          # Node scripts that run build related tools
+│   ├── helpers                    # Utility scripts
+│   │   ├── buildMessage.js        # Display a message when production build starts
+│   │   ├── chalkConfig.js         # Global config for chalk (adds color to your console)
+│   │   ├── env                    # Node environment configuration
+│   │   ├── nodeVersionCheck.js    # Check for your node version
+│   │   └── startMessage.js        # Display a message when development build starts
 │   ├── assetsTransformer.js       # Fix for jest handling static assets like imported images
 │   ├── build.js                   # Runs the production build
-│   ├── chalkConfig.js             # Global config for chalk (adds color to your console)
-│   ├── env                        # Node environment configuration
-│   ├── nodeVersionCheck.js        # Check for your node version
 │   ├── server.js                  # Starts webserver and opens dev or prod app depending on the node env
-│   ├── startMessage.js            # Display message when development build starts
 │   └── testCi.js                  # Configure Jest to run on a CI server
 ├── .babelrc                       # Babel rules
 ├── .editorconfig                  # Configures editor rules. You should install an "editorconfig" plugin on your editor.
