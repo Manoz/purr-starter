@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
@@ -56,12 +55,6 @@ module.exports = require('./webpack.config.base')({
 
   plugins: [
     new webpack.ExtendedAPIPlugin(),
-
-    new HtmlWebpackPlugin({
-      template: 'src/index.ejs',
-      favicon: 'src/assets/images/favicon/favicon.ico',
-      inject: true,
-    }),
 
     new WebpackPwaManifest({
       name: 'Purr Starter',

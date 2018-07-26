@@ -5,11 +5,10 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const pkg = require('../package.json');
 
 const isDev = process.env.NODE_ENV !== 'production';
-const appVersion = pkg.version;
 
 module.exports = options => ({
   mode: options.mode,
@@ -44,7 +43,12 @@ module.exports = options => ({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
-      APP_VERSION: JSON.stringify(appVersion),
+    }),
+
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      favicon: 'src/assets/images/favicon/favicon.ico',
+      inject: true,
     }),
 
     new MiniCssExtractPlugin({
@@ -154,6 +158,10 @@ module.exports = options => ({
             },
           },
         ],
+      },
+      {
+        test: /\.html$/,
+        use: 'html-loader',
       },
     ],
   },
