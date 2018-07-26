@@ -69,8 +69,6 @@
     ]
   },
   "dependencies": {
-    "jquery": "^3.3.1",
-    "modernizr": "^3.6.0",
     "sanitize.css": "^6.0.0"
   },
   "devDependencies": {
