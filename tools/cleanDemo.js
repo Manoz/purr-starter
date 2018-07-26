@@ -1,6 +1,6 @@
 // This script cleans the demo app
 const shell = require('shelljs');
-const addCheckMark = require('./checkmark');
+const addCheckMark = require('./helpers/checkmark');
 
 process.stdin.setEncoding('utf8');
 
