@@ -5,9 +5,7 @@
 <br />
 
 <div align="center">
-  <strong>purr starter is a modern Webpack starter kit fueled with a lot of cool stuff.</strong>
-
-  <p>🚧 WIP 🚧 : It's a beta, it works fine but I need to improve a lot of things. Use it, test it, play with it, share it, do what you want ❤️</p>
+  <p><strong>purr starter is a simple front-end starter kit built with modern web technologies ❤️</strong></p>
 </div>
 
 <div align="center">
@@ -18,40 +16,24 @@
 [![devDependencies Status](https://david-dm.org/manoz/purr-starter/dev-status.svg)](https://david-dm.org/manoz/purr-starter?type=dev)
 [![Coverage Status](https://coveralls.io/repos/github/Manoz/purr-starter/badge.svg?branch=master)](https://coveralls.io/github/Manoz/purr-starter?branch=master)
 
-**Current version:** `0.1.1`
+**Current version:** `0.1.3`
 </div>
 
 ## ☕️ Quick start
 
-1. Clone and install dependencies
-```
-git clone git@github.com:Manoz/purr-starter.git
-cd purr-starter
-yarn install
-```
+1. Clone this repo using `git clone https://github.com/Manoz/purr-starter.git` and move to the directory: `cd purr-starter`
+2. Run `yarn setup` or `npm run setup` to start the setup process and install dependencies
+3. Run `yarn start` or `npm run start` to see the demo app at *`http://localhost:3000`*
+4. Run `yarn remove-demo` or `npm run remove-demo` to delete the demo app
 
-2. Run the app
-```
-yarn start
-```
+If you don't want to use the setup script you can run `yarn install` or `npm install` after cloning the repo and keep everything in place.
 
-It will start the dev server (browserSync feat webpack).
+Here is some additional commands you can also use:
 
-3. Build everything
-```
-yarn build
-```
+* `yarn build` or `npm run build`: to build the production app inside the `*./dist*` folder.
+* `yarn test` or `npm run test` to test the built app
 
-It will serve all files in the `/dist` folder and run the tests.
-
-4. Test the app
-```
-yarn test
-```
-
-Here is some commands you can also use instead:
-
-* `yarn clean-dist`: clean the './dist' folder
+More information about the npm scripts can be found [here](https://github.com/Manoz/purr-starter/tree/master/docs#npm-scripts).
 
 ## 📖 Documentation
 
@@ -59,25 +41,23 @@ The documentation for this project is not perfect for now but I'll add more cont
 
 You can learn more about purr-starter [here](./docs/README.md).
 
-## 🚎 Technos
+## 🚎 Features
 
-This app uses some good technologies:
+1. **Easy as pie** - run one of the easiest webpack starter kit without much knowledge
+2. **Instant feedback** - hot reload your browser each time you save a file
+3. **Automated production build** - `yarn build` or `npm run build` to build your app. You don't even need a node.js server since it's almost pure html.
+4. **One page ready** - this starter kit was meant to build single page app as simple as possible
+5. **Continuous Integration** - AppVeyor and TravisCI are ready to catch problems and will test everything on Unix and Windows.
+
+This app also uses some good technologies:
 
 * Babel
 * Browsersync
 * ESlint (with the badass airbnb config)
-* SASS
+* Jest
+* npm scripts
+* SASS / PostCSS
 * Webpack
-
-
-## TODO
-
-  * [x] Maybe add some kind of watcher when adding images in the `./src/assets/images` folder.
-  * [x] Add Jest or Mocha tests
-  * [x] More webpack (or maybe Gulp) tasks to handle fonts or iconfonts (cancelled)
-  * [x] Add CI
-  * [ ] Handle iconfont svg
-  * [ ] Better readme and documentation
 
 # License
 Released under the [MIT](./LICENSE) license.

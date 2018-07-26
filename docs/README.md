@@ -5,6 +5,7 @@
 - About this project
   - [Why I've created it](#why-ive-created-it)
   - [Folder structure](#folder-structure)
+  - [About the setup script](#about-the-setup-script)
   - [How to clean the starter kit?](#how-to-clean-the-starter-kit)
   - [What other project inspired me](#what-other-project-inspired-me)
 - Technologies
@@ -43,13 +44,15 @@ This project is also useful as inspiration for ideas you might want to integrate
 ├── tasks                          # Contains Webpack config for dev and prod env
 ├── test                           # Test files used by Jest to test your app
 ├── tools                          # Node scripts that run build related tools
+│   ├── helpers                    # Utility scripts
+│   │   ├── buildMessage.js        # Display a message when production build starts
+│   │   ├── chalkConfig.js         # Global config for chalk (adds color to your console)
+│   │   ├── env                    # Node environment configuration
+│   │   ├── nodeVersionCheck.js    # Check for your node version
+│   │   └── startMessage.js        # Display a message when development build starts
 │   ├── assetsTransformer.js       # Fix for jest handling static assets like imported images
 │   ├── build.js                   # Runs the production build
-│   ├── chalkConfig.js             # Global config for chalk (adds color to your console)
-│   ├── env                        # Node environment configuration
-│   ├── nodeVersionCheck.js        # Check for your node version
 │   ├── server.js                  # Starts webserver and opens dev or prod app depending on the node env
-│   ├── startMessage.js            # Display message when development build starts
 │   └── testCi.js                  # Configure Jest to run on a CI server
 ├── .babelrc                       # Babel rules
 ├── .editorconfig                  # Configures editor rules. You should install an "editorconfig" plugin on your editor.
@@ -76,6 +79,7 @@ Here's some information on what major script in `package.json` does.
 | preinstall        | Runs automatically before `yarn install` to check your node version                                                  |
 | prestart          | Runs automatically before start to display a message.                                                                |
 | start             | Starts the dev webserver and opens the app in your default browser.                                                  |
+| setup             | Install dependencies and start the setup script                                                                      |
 | open:src          | Opens the app in your browser with the dev environment                                                               |
 | open:dist         | Opens the app in your browser with the production build.                                                             |
 | lint              | Lint CSS and JS for the production build.                                                                            |
@@ -90,6 +94,15 @@ Here's some information on what major script in `package.json` does.
 | test:cover:CI     | This should only be used from the travis build. Runs coverage and sends machine readable lcov data to Coveralls.     |
 
 Unfortunately, I can't comment scripts in package.json so feel free to read the scripts and ask if there's something you don't understand or something I could improve.
+
+## About the setup script
+
+The setup script is used to make it easier for you to own the starter-kit.
+It removes the original Git Repository, the npm setup script in your `package.json` and the JS script in the `./tools` folder.
+
+It's perfect if you want to run your app as fast as possible.
+
+If you don't want to use the setup script you can run `yarn install` or `npm install` after cloning the repo and keep everything in place.
 
 ## How to clean the starter kit?
 
