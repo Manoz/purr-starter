@@ -1,13 +1,7 @@
 <p align="center">
   <img src="https://i.imgur.com/Wcx8so9.png" align="center" alt="purr starter banner"/>
 </p>
-
 <br />
-
-<div align="center">
-  <p><strong>purr starter is a simple front-end starter kit built with modern web technologies ❤️</strong></p>
-</div>
-
 <div align="center">
 
 [![Build Status](https://travis-ci.com/Manoz/purr-starter.svg?token=fV1pgutnXPjejYrLnsBw&branch=master)](https://travis-ci.com/Manoz/purr-starter)
@@ -18,6 +12,12 @@
 
 **Current version:** `0.1.3`
 </div>
+
+## 🤖 Introduction
+
+**purr starter** is a simple front-end starter kit built with modern web technologies.
+
+It was designed to make the process of creating simple projects easier. For example to create a simple html page with modern technologies like Babel, Eslint, Webpack or Jest to test your application.
 
 ## ☕️ Quick start
 

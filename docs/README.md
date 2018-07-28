@@ -22,7 +22,7 @@ Most of the ones I tested didn't suit me. Either they were a little too *overkil
 
 I decided to create my own starter-kit using everything I would have liked to see in a project like this. The goal is to make it as simple as possible so that everyone can use it whether you are a beginner or not.
 
-This project is also useful as inspiration for ideas you might want to integrate into your development environment.
+This project is also used as an inspiration for ideas you might want to integrate into your development environment.
 
 ## Folder structure
 
