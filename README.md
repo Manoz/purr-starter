@@ -4,13 +4,13 @@
 <br />
 <div align="center">
 
-[![Build Status](https://travis-ci.com/Manoz/purr-starter.svg?token=fV1pgutnXPjejYrLnsBw&branch=master)](https://travis-ci.com/Manoz/purr-starter)
-[![Build status](https://ci.appveyor.com/api/projects/status/ddqbl7ts07ly5go0?svg=true)](https://ci.appveyor.com/project/Manoz/purr-starter)
-[![dependencies Status](https://david-dm.org/manoz/purr-starter/status.svg)](https://david-dm.org/manoz/purr-starter)
-[![devDependencies Status](https://david-dm.org/manoz/purr-starter/dev-status.svg)](https://david-dm.org/manoz/purr-starter?type=dev)
-[![Coverage Status](https://coveralls.io/repos/github/Manoz/purr-starter/badge.svg?branch=master)](https://coveralls.io/github/Manoz/purr-starter?branch=master)
+[![tests][tests]][tests-url]
+[![builds][builds]][builds-url]
+[![deps][deps]][deps-url]
+[![deps-dev][deps-dev]][deps-dev-url]
+[![cover][cover]][cover-url]
 
-**Current version:** `1.0.0`
+**Current version:** `1.0.1`
 </div>
 
 ## 🤖 Introduction
@@ -52,7 +52,6 @@ You can learn more about purr-starter [here](./docs/README.md).
 This app also uses some good technologies:
 
 * Babel
-* Browsersync
 * ESlint (with the badass airbnb config)
 * Jest
 * npm scripts
@@ -61,3 +60,21 @@ This app also uses some good technologies:
 
 # License
 Released under the [MIT](./LICENSE) license.
+
+[deps]: https://david-dm.org/manoz/purr-starter/status.svg
+[deps-url]: https://david-dm.org/manoz/purr-starter
+
+[deps-dev]: https://david-dm.org/manoz/purr-starter/dev-status.svg
+[deps-dev-url]: https://david-dm.org/manoz/purr-starter?type=dev
+
+[tests]: https://travis-ci.com/Manoz/purr-starter.svg?token=fV1pgutnXPjejYrLnsBw&branch=master
+[tests-url]: https://travis-ci.com/Manoz/purr-starter
+
+[builds-url]: https://ci.appveyor.com/project/Manoz/purr-starter
+[builds]: https://ci.appveyor.com/api/projects/status/ddqbl7ts07ly5go0?svg=true
+
+[licenses-url]: https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fwebpack%2Fwebpack?ref=badge_shield
+[licenses]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fwebpack%2Fwebpack.svg?type=shield
+
+[cover]: https://coveralls.io/repos/github/Manoz/purr-starter/badge.svg?branch=master
+[cover-url]: https://coveralls.io/github/Manoz/purr-starter?branch=master
