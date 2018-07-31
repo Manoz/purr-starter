@@ -10,22 +10,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const isDev = process.env.NODE_ENV !== 'production';
 
-module.exports = options => ({
-  mode: options.mode,
-  entry: options.entry,
-
-  output: Object.assign(
-    {
-      path: path.resolve(process.cwd(), 'dist'),
-      publicPath: '',
-    },
-    options.output,
-  ),
-
-  optimization: options.optimization,
-  devtool: options.devtool,
+module.exports = {
   target: 'web',
-  performance: options.performance || {},
 
   resolve: {
     modules: ['node_modules', 'src'],
@@ -33,7 +19,7 @@ module.exports = options => ({
     mainFields: ['browser', 'jsnext:main', 'main'],
   },
 
-  plugins: options.plugins.concat([
+  plugins: [
     new webpack.ProvidePlugin({
       // make fetch available
       fetch: 'exports-loader?self.fetch!whatwg-fetch',
@@ -56,7 +42,7 @@ module.exports = options => ({
       filename: isDev ? 'styles/[name].css' : 'styles/[name].[hash].min.css',
       chunkFilename: isDev ? 'styles/[id].css' : 'styles/[id].[hash].css',
     }),
-  ]),
+  ],
 
   module: {
     rules: [
@@ -65,7 +51,6 @@ module.exports = options => ({
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: options.babelQuery,
         },
       },
       {
@@ -166,4 +151,4 @@ module.exports = options => ({
       },
     ],
   },
-});
+};

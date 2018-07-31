@@ -1,11 +1,14 @@
 const path = require('path');
+const merge = require('webpack-merge');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { HashedModuleIdsPlugin } = require('webpack');
 
-module.exports = require('./webpack.config.base')({
+const webpackBase = require('./webpack.config.base');
+
+module.exports = merge(webpackBase, {
   mode: 'production',
 
   entry: [path.join(process.cwd(), 'src/scripts/main.js')],

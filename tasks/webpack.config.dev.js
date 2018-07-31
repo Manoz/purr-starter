@@ -1,10 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
+const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
-module.exports = require('./webpack.config.base')({
+const webpackBase = require('./webpack.config.base');
+
+module.exports = merge(webpackBase, {
   mode: 'development',
 
   // Add hot reloading in development
@@ -29,6 +32,16 @@ module.exports = require('./webpack.config.base')({
   },
 
   devtool: 'eval-source-map',
+
+  devServer: {
+    contentBase: './src',
+    port: 3000,
+    index: './public/index.html',
+    historyApiFallback: true,
+    watchContentBase: true,
+    hot: true,
+    noInfo: true,
+  },
 
   performance: {
     hints: false,

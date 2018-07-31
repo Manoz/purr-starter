@@ -33,14 +33,12 @@ This project is also used as an inspiration for ideas you might want to integrat
 │   └── PULL_REQUEST_TEMPLATE.md   # PR template
 ├── dist                           # Folder where the built app is placed. Use it in production
 ├── docs                           # Contains all the project documentation
+├── public                         # Contains the public files (assets and index.html)
 ├── src                            # Main app source code
-│   ├── assets                     # All the assets that are not styles or scripts
 │   ├── scripts                    # All JavaScript files bundeled by Webpack
 │   │   ├── main.js                # Entry point for the app used by Webpack
 │   │   └── sum.js                 # Sample file for test purpose
-│   ├── styles                     # All SCSS files bundeled by Webpack
-│   ├── .htaccess                  # Sample .htaccess file
-│   └── index.html                 # Main HTML file
+│   └── styles                     # All SCSS files bundeled by Webpack
 ├── tasks                          # Contains Webpack config for dev and prod env
 ├── test                           # Test files used by Jest to test your app
 ├── tools                          # Node scripts that run build related tools
@@ -50,9 +48,11 @@ This project is also used as an inspiration for ideas you might want to integrat
 │   │   ├── env                    # Node environment configuration
 │   │   ├── nodeVersionCheck.js    # Check for your node version
 │   │   └── startMessage.js        # Display a message when development build starts
+│   ├── templates                  # Contains the "no demo" template files (used when you want to remove the demo app)
 │   ├── assetsTransformer.js       # Fix for jest handling static assets like imported images
 │   ├── build.js                   # Runs the production build
-│   ├── server.js                  # Starts webserver and opens dev or prod app depending on the node env
+│   ├── cleanDemo.js               # Script used to clean the demo app
+│   ├── setup.js                   # Script used to setup the app (install dependencies, remove git if wanted,...)
 │   └── testCi.js                  # Configure Jest to run on a CI server
 ├── .babelrc                       # Babel rules
 ├── .editorconfig                  # Configures editor rules. You should install an "editorconfig" plugin on your editor.
@@ -80,8 +80,6 @@ Here's some information on what major script in `package.json` does.
 | prestart          | Runs automatically before start to display a message.                                                                |
 | start             | Starts the dev webserver and opens the app in your default browser.                                                  |
 | setup             | Install dependencies and start the setup script                                                                      |
-| open:src          | Opens the app in your browser with the dev environment                                                               |
-| open:dist         | Opens the app in your browser with the production build.                                                             |
 | lint              | Lint CSS and JS for the production build.                                                                            |
 | lint:eslint:fix   | Utility command to automatically fix (if possible) the Eslint issues                                                 |
 | clean-dist        | Removes the `./dist` folder                                                                                          |

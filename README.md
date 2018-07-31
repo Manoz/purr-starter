@@ -10,7 +10,7 @@
 [![devDependencies Status](https://david-dm.org/manoz/purr-starter/dev-status.svg)](https://david-dm.org/manoz/purr-starter?type=dev)
 [![Coverage Status](https://coveralls.io/repos/github/Manoz/purr-starter/badge.svg?branch=master)](https://coveralls.io/github/Manoz/purr-starter?branch=master)
 
-**Current version:** `0.1.3`
+**Current version:** `1.0.0`
 </div>
 
 ## 🤖 Introduction
