@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.1
+
+Had an issue with appveyor cache. I had to cleanup the cache but looks like the issue was related to the `nodeVersionCheck` script since chalk is not installed before this script runs.
+
+I've decided to remove chalk from this script file and re build Appveyor cache.
+
+- remove chalk in `nodeVersionCheck` script
+- rebuild Appveyor cache
+
 ## 1.0.0
 
 Version 1.0 is finally released. It's been a lot of work for me and I learned so much. 
