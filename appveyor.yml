@@ -23,8 +23,8 @@ install:
 
 # Cache node_modules for faster builds
 cache:
-  - "%LOCALAPPDATA%\\Yarn"
-  - node_modules -> package.json
+  # - "%LOCALAPPDATA%\\Yarn"
+  # - packages -> appveyor.yml
 
 # Post-install test scripts.
 test_script:
