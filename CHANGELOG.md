@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2
+
+Jsdom has been recently updated and causes issues with localStorage support.
+See: https://github.com/facebook/jest/issues/6766
+
+- fix jest localStorage issue
+
 ## 1.0.1
 
 Had an issue with appveyor cache. I had to cleanup the cache but looks like the issue was related to the `nodeVersionCheck` script since chalk is not installed before this script runs.

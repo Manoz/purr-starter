@@ -1,7 +1,7 @@
 {
   "name": "purr-starter",
   "displayName": "Purr Starter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple front-end starter kit built with modern web technologies",
   "author": {
     "name": "Kevin Legrand",
@@ -50,6 +50,7 @@
     "test:cover:CI": "npm run test:CI -- --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "jest": {
+    "testEnvironment": "node",
     "moduleDirectories": [
       "node_modules",
       "src"

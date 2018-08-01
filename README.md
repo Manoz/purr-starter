@@ -10,7 +10,7 @@
 [![deps-dev][deps-dev]][deps-dev-url]
 [![cover][cover]][cover-url]
 
-**Current version:** `1.0.1`
+**Current version:** `1.0.2`
 </div>
 
 ## 🤖 Introduction
