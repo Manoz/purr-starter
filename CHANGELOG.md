@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+
+Small fix for required node version.
+
 ## 1.0.3
 
 Upgrade all npm dependencies.

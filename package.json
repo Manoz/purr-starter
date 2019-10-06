@@ -1,7 +1,7 @@
 {
   "name": "purr-starter",
   "displayName": "Purr Starter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple front-end starter kit built with modern web technologies",
   "author": {
     "name": "Kevin Legrand",
@@ -23,8 +23,8 @@
     "url": "https://github.com/Manoz/purr-starter.git"
   },
   "engines": {
-    "node": ">=12",
-    "npm": ">=6"
+    "node": ">=8",
+    "npm": ">=3"
   },
   "scripts": {
     "preinstall": "node tools/helpers/nodeVersionCheck.js",
