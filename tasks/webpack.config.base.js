@@ -78,7 +78,9 @@ module.exports = {
             // compiles Sass to CSS
             loader: 'sass-loader',
             options: {
-              includePaths: [path.resolve(__dirname, 'src', 'scss')],
+              sassOptions: {
+                includePaths: [path.resolve(__dirname, 'src', 'scss')],
+              },
               sourceMap: false,
             },
           },
@@ -138,7 +140,7 @@ module.exports = {
                 optimizationLevel: 7,
               },
               pngquant: {
-                quality: '65-90',
+                quality: [0.65, 0.90],
                 speed: 4,
               },
             },

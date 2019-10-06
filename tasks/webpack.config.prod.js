@@ -14,28 +14,19 @@ module.exports = merge(webpackBase, {
   entry: [path.join(process.cwd(), 'src/scripts/main.js')],
 
   output: {
-    filename: 'scripts/[name].[chunkhash].js',
-    chunkFilename: 'scripts/[name].[chunkhash].chunk.js',
+    filename: 'scripts/[name].[hash].js',
+    chunkFilename: 'scripts/[name].[hash].chunk.js',
   },
 
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
         uglifyOptions: {
-          parse: {
-            ecma: 8,
-          },
           compress: {
-            ecma: 5,
-            warnings: false,
             comparisons: false,
           },
-          mangle: {
-            safari10: true,
-          },
+          mangle: true,
           output: {
-            ecma: 5,
-            comments: false,
             ascii_only: true,
           },
         },
@@ -56,7 +47,7 @@ module.exports = merge(webpackBase, {
   devtool: 'eval-source-map',
 
   performance: {
-    assetFilter: assetFilename => !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
+    assetFilter: (assetFilename) => !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
   },
 
   plugins: [

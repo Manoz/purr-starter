@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+Upgrade all npm dependencies.
+
 ## 1.0.2
 
 Jsdom has been recently updated and causes issues with localStorage support.
