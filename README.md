@@ -10,7 +10,7 @@
 [![deps-dev][deps-dev]][deps-dev-url]
 [![cover][cover]][cover-url]
 
-**Current version:** `1.0.2`
+**Current version:** `1.0.4`
 </div>
 
 ## 🤖 Introduction
@@ -26,7 +26,7 @@ It was designed to make the process of creating simple projects easier. For exam
 3. Run `yarn start` or `npm run start` to see the demo app at *`http://localhost:3000`*
 4. Run `yarn remove-demo` or `npm run remove-demo` to delete the demo app
 
-If you don't want to use the setup script you can run `yarn install` or `npm install` after cloning the repo and keep everything in place.
+If you don't want to use the setup script you can run `yarn` or `npm install` after cloning the repo and keep everything in place.
 
 Here is some additional commands you can also use:
 
