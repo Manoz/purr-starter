@@ -23,8 +23,8 @@
     "url": "https://github.com/Manoz/purr-starter.git"
   },
   "engines": {
-    "node": ">=8",
-    "npm": ">=3"
+    "node": ">=10.13",
+    "npm": ">=6"
   },
   "scripts": {
     "preinstall": "node tools/helpers/nodeVersionCheck.js",
